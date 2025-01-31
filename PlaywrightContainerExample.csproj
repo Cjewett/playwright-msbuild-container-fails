@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <EnableSdkContainerSupport>true</EnableSdkContainerSupport>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <ContainerBaseImage>mcr.microsoft.com/playwright/dotnet:v1.49.0-noble</ContainerBaseImage>
+    <ContainerImageTags>latest</ContainerImageTags>
+    <ContainerUser>root</ContainerUser>
+  </PropertyGroup>
+
+  <ItemGroup Label="ContainerAppCommand Assignment">
+    <ContainerAppCommand Include="dotnet;test" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ContainerAppCommandArgs Include="PlaywrightContainerExample.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Playwright.MSTest" Version="1.49.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.12.0" />
+    <PackageReference Include="MSTest" Version="3.7.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Microsoft.Playwright.MSTest" />
+    <Using Include="Microsoft.VisualStudio.TestTools.UnitTesting" />
+    <Using Include="System.Text.RegularExpressions" />
+    <Using Include="System.Threading.Tasks" />
+  </ItemGroup>
+
+</Project>
