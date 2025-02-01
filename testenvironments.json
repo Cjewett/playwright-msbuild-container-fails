@@ -1,0 +1,10 @@
+{
+    "version": "1",
+    "environments": [
+        {
+            "name": "Linux CI",
+            "type": "docker",
+            "dockerImage": "mcr.microsoft.com/playwright/dotnet:v1.49.0-noble"
+        }
+    ]
+}

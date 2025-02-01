@@ -6,6 +6,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <EnableSdkContainerSupport>true</EnableSdkContainerSupport>
+    <PlaywrightPlatform>all</PlaywrightPlatform>
   </PropertyGroup>
 
   <PropertyGroup>
